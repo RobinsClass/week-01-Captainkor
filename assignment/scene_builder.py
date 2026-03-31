@@ -91,26 +91,33 @@ building = cmds.polyCube(
 )[0]
 
 
-# ---------------------------------------------------------------------------
-# TODO: Add Object 3
-# ---------------------------------------------------------------------------
+building_width = 4
+building_height = 6
+building_depth = 4
+building_x = -8
+building_z = 5
 
+building = cmds.polyCube(
+    name="building_01",
+    width=building_width,
+    height=building_height,
+    depth=building_depth,
+)[0]
+# Raise the building so its base sits on the ground plane.
+cmds.move(building_x, building_height / 2.0, building_z, building)
 
-# ---------------------------------------------------------------------------
-# TODO: Add Object 4
-# ---------------------------------------------------------------------------
+building2_width = 4
+building2_height = 6
+building2_depth = 4
+building2_x = -8
+building2_z = 5
 
-
-# ---------------------------------------------------------------------------
-# TODO: Add Object 5
-# ---------------------------------------------------------------------------
-
-
-# ---------------------------------------------------------------------------
-# TODO (Optional): Add more objects to make your scene more interesting!
-# Consider: trees, lamp posts, fences, vehicles, animals, etc.
-# ---------------------------------------------------------------------------
-
+building = cmds.polyCube(
+    name="building_02",
+    width=building2_width,
+    height=building2_height,
+    depth=building2_depth,
+)[0]
 
 # ---------------------------------------------------------------------------
 # Frame All -- so the whole scene is visible in the viewport.
