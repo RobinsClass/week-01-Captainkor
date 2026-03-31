@@ -103,7 +103,8 @@ building = cmds.polyCube(
     height=building_height,
     depth=building_depth,
 )[0]
-# Raise the building so its base sits on the ground plane.
+
+
 cmds.move(building_x, building_height / 2.0, building_z, building)
 
 building2_width = 4
